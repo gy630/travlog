@@ -1,0 +1,201 @@
+/* 기본은 600정보 모바일 */
+
+@media (max-width:460px){
+  section {
+    padding: 2rem 0;
+    margin-bottom: 4rem;
+  }
+
+  .sec01_imgs { padding:5rem 2rem 0; }
+  .sec01_imgs .left { display: none; } 
+
+  .card1 { padding: 4rem; } 
+
+  h1.mainTxt { font-size: 4rem;
+    line-height: 1.2;
+    margin-bottom: 2rem; }
+  .sec07 { padding:6rem 1.6rem; }
+}
+
+
+@media (min-width:768px){
+  h3 { font-size: 2.6rem; }
+  h4 { font-size: 2rem; }
+
+  .tablet { display:block; }
+  .rel { width:720px; margin: auto; }
+
+  .subNav li a { font-size: 7.68rem; } /* 768 * 10 = 76.8*/
+  .header_btns a {
+    font-size: 2.53rem; /* 10  + 15.36*/
+    padding: 3.136rem;  
+  }
+
+  .title_up { letter-spacing:0.3rem ;}
+  .sec01 .btns { justify-content: center; }
+  .sec01 .btns > * {  flex: none; }
+
+  /* 슬라이더 적용 안할때 */
+  .card_wrap > div{ display: flex; gap:2rem; }
+  .sec02 .card + .card { display: block; }
+
+  .card + .card { display: block; }
+  .card1 { width: 28.4rem; padding: 3rem; }
+  .card2 { width: 28.4rem; }
+  .card2 .card_title { gap:1rem; }
+  .card2 .price { font-size:2rem; }
+
+  .sec05 .boxes { 
+    grid-template-rows:repeat(2, 1fr);
+    grid-template-columns:repeat(2, 1fr);}
+
+}
+
+
+/* 햄버거버튼 없어짐 */
+@media (min-width:1024px){
+  .pc { display:block; }
+  .rel { width:980px; margin: auto; }
+
+
+  .header_right { display: none; }
+  
+  .subNav {
+    display: flex; justify-content: space-between; align-items: center;
+    position: relative; top: auto; right: auto;
+    width:60%;  height: auto;
+    background:transparent;
+  }
+  .subNav ul { margin:0; display: flex; gap:2rem; }
+  .subNav li a { font-size: 1.6rem; }
+
+  .header_btns { margin-left:0; }
+  .header_btns a { font-size: 1.4rem; padding: 0 1.6rem }
+
+  .sec01 .rel,
+  .sec05 .rel,
+  .sec06 .rel { flex-direction: row; }
+
+  .sec01 .text_wrap { flex:1; order: 0; text-align: left; margin-top: 8rem; }
+  
+  .sec01 .txt1 { padding:0 0 4rem;}
+  
+  .sec01 .btns { justify-content: start; }
+  .sec01 .img_wrap { flex:2; }
+  .sec01_imgs { max-width: 100%; }
+  .sec01 .tablet, 
+  h1.mainTxt > br { display: none;}
+
+  .card1 { padding:6rem; }
+
+  .sec03 .slider { width: 100%; height: 4rem; }
+  .sec03 .row { position: relative; height: 4rem; overflow: hidden; }
+  .sec03 .row::before, .sec03 .row::after { 
+    position: absolute; content: ""; width: 10rem; height: 4rem; z-index: 2;
+      }
+    .sec03 .row::before { background: linear-gradient(to left, rgba(255,255,255,0), rgba(255,255,255,0.7), rgba(255,255,255,1) ); }
+    .sec03 .row::after { right:0; background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.7), rgba(255,255,255,1) ); }
+
+
+
+  .sec03 .arrow { display: none; }
+  .sec03 .row_inner { 
+    position: absolute; top:0;
+    width: 230rem;
+    height: 100%;
+    display: flex; gap:7rem;
+    animation: siteSlider 10s linear infinite alternate;
+  }
+  .sec03 .row_inner img {
+    position: static; transform: translate(0,0); opacity: 1;
+  }
+  @keyframes siteSlider {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-100% + 98rem));}
+  }
+
+  .sec05 .img_wrap { width: 49rem; margin:0; }
+  .sec05 .text_wrap { flex:1; text-align: left; }
+  .sec05 .text_wrap h2 { padding: 0; }
+  .sec05 .text_wrap .txt1 { padding: 3rem 0; }
+  .sec05 .text_wrap .tablet { display: none; }
+
+  .sec06 .rel > * { flex:1; }
+  .sec06 .img_wrap { order:1; padding: 0;}
+  .sec06 .text_wrap { text-align: left; }
+  .sec06 .text_wrap h2 { padding: 0; }
+  .sec06 .text_wrap .txt1 { padding: 3rem 0; }
+  .sec06 .text_wrap .tablet { display: none; }
+  .s6_box { padding:1.8rem; }
+
+  .sec07 .email { gap:2rem; flex-direction: row; }
+  .sec07 .input { flex:1; }
+  .sec07 input { font-size: 2rem; }
+  .sec07 .btn { padding:0 5rem }
+
+  footer .rel { display: flex; }
+  .addressWrap { width:40%; text-align: left; }
+  .addressWrap > * { margin-bottom: 2rem; } 
+  .addressWrap .txt1 { font-size: 1.4rem; }
+  .company { width:15%; }
+  .destinations { width:20%; }
+  .sns { width:25%; }
+  .sns .icons { justify-content: start; }
+  
+  footer h5 { margin-bottom: 2rem; padding-top: 1rem; white-space: nowrap; }
+  footer li { margin-bottom: 1rem; }
+  footer a { font-size: 1.4rem; color: var(--gray4); }
+}
+
+
+
+@media ( min-width:1440px){
+  .rel { width:142rem; }
+  .title_up { letter-spacing:0.5rem; }
+  .txt2 { font-size: 2rem;}
+  h1.mainTxt{ font-size: 6.4rem;}
+  .txt1 { font-size: 2rem;}
+  h2 { font-size: 4.5rem; }
+
+
+  .subNav {  width: 60%; }
+  .subNav ul { gap:4rem; }
+  .subNav li a { font-size: 2rem; }
+
+  .sec01 .img_wrap { flex: 1; }
+  .sec01 .tablet { display:block; }
+
+  .sec02 .card_wrap { width: 98rem; margin: auto; }
+  .card_wrap .txt1 { font-size: 1.8rem;}
+
+
+  .sec03 .row_inner { 
+    position: absolute; top:0;
+    width: 230rem;
+    height: 100%;
+    display: flex; gap:7rem;
+    animation: siteSlider2 10s linear infinite alternate;
+  }
+  .sec03 .row_inner img {
+    position: static; transform: translate(0,0); opacity: 1;
+  }
+  @keyframes siteSlider2 {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-100% + 142rem));}
+  }
+
+  .sec05 .img_wrap { width: 71rem; }
+  .sec05 .text_wrap { margin-left: 5rem; }
+
+  .s6_box { width:80% ;}
+  .s6_box .txt2 { font-size: 1.6rem;}
+
+  .sec07 .email { padding:0 12rem; }
+
+  .addressWrap { width: 40%; }
+  .company { width:20%; }
+  .destinations { width:20%; }
+  .sns { width:20%; }
+  .address.txt2 { font-size: 1.4rem;}
+
+}

@@ -1,0 +1,58 @@
+h1.mainTxt { font-size: 5rem; font-weight:800; line-height:1.3; margin-bottom: 2rem; }
+h2 { font-size: 3.6rem; font-weight:700; line-height: 1.3; }
+h3 { font-size: 3rem; font-weight:700; line-height: 1.3;}
+h4 { font-size: 2.3rem; font-weight:500; line-height: 1.3; }
+h5 { font-size: 1.8rem; font-weight:500; line-height: 1.3; }
+
+.txt1 { font-size: 1.8rem; line-height: 1.4; }
+.txt2 { font-size: 1.4rem; font-weight:500;  }
+
+.title_top { font-size: 1.8rem; letter-spacing: 0.6rem; }
+.title_up { color: var(--colorS); margin-bottom:2rem;}
+strong { color: var(--colorM); }
+
+.btn { display: flex; align-items: center; justify-content: center; font-size: 1.4rem; height: 40px;
+  border:1px solid var(--gray1); padding: 0 1.6rem; border-radius: 4px; transition: .2s; text-align: center;
+}
+.btn:hover { background: var(--gray1); color:#fff; }
+
+.btn.clean { border:none; }
+.btn.clean:hover { background:transparent; color: var(--colorM) }
+
+.btn.subColor { background: var(--colorS); color:#fff; border:none; border:1px solid var(--colorS) }
+.btn.subColor:hover { background:transparent; color: var(--colorS) }
+
+.btn.mainColor { background: var(--colorM); color:#fff; border:none; border:1px solid var(--colorM) }
+.btn.mainColor:hover { background:transparent; color: var(--colorM)}
+
+.rel { position: relative; height: 100%; }
+
+.card_wrap { padding:2rem 1rem; width: 100%; }
+.card { border-radius: 1.6rem; box-shadow:0 4px 10px rgba(0,0,0,0.5); }
+.card1 { padding:8rem; text-align: center; }
+.card1 figure { text-align: center; }
+.card1 .card_txt { text-align: center; padding-top: 5rem; }
+.card1 h3 { margin-bottom: 2rem; }
+.card1 .txt1 { color:var(--gray4) }
+
+.boxes { display: grid; gap: 2rem; }
+.box { border: 1px solid var(--gray4); border-radius:1.6rem; padding: 2.2rem; }
+
+section { padding:3rem 0;  margin-bottom:10rem; }
+.tablet, .pc { display:none; }
+
+/* 애니메이션들 */
+@keyframes toUp {
+  0% { transform:translateY(100px); }
+  100% { transform:translateY(0); opacity:1; }
+}
+
+@keyframes toRight {
+  0% { transform:translateX(-100px); }
+  100% { transform:translateX(0); opacity:1; }
+}
+
+@keyframes toDown {
+  0% { transform:translateY(0); }
+  100% { transform:translateY(100px); opacity:1; }
+}

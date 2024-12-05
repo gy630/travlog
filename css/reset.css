@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+:root {
+  --gray1 :#3c3c3c;
+  --gray2 :#575757;
+  --gray3 :#707070;
+  --gray4 :#A1A1A1;
+  --gray5 :#CACACA;
+  --gray6 :#E4E4E4;
+
+  --colorM :#DF6951; 
+  --colorS :#F2994A; 
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing:border-box;  /* 추가 */
+}
+
+html { font-size: 62.5%; } /*  16px이 기본 -> 10px */
+body { font-family: "Poppins", arial, sans-serif; color:#111;
+	overflow-x: hidden; 
+}
+
+img { max-width: 100%; }
+
+ol, ul {
+	list-style: none;
+}
+ul:after { display: block; content: ""; clear: both; }
+
+a { 
+	text-decoration: none;
+	color:inherit
+}
